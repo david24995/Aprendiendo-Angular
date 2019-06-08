@@ -1,0 +1,19 @@
+<h1 class="animated fadeIn"> {{ selectedHeroe.nombre | uppercase }} <small>({{ selectedHeroe.aparicion | date:'y' }})</small> </h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="selectedHeroe.img" class="img-fluid" alt="">
+        <br><br>
+        <a class="btn btn-outline-danger btn-block" [routerLink]="['/heroes']">Regresar</a>
+    </div>
+    <div class="col-md-8 mt-5 mt-md-0 ">
+        <h3> {{ selectedHeroe.nombre }} </h3>
+        <hr>
+        <p>
+            {{ selectedHeroe.bio }}
+        </p>
+        <div class="text-center">
+            <img [src]="link" [alt]="selectedHeroe.nombre" />
+        </div>
+    </div>
+</div>
